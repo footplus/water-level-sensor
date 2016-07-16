@@ -35,10 +35,10 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title ""
-Date ""
-Rev ""
-Comp ""
+Title "Sonde niveau d'eau - Ecran"
+Date "2016-07-16"
+Rev "1.0"
+Comp "Chatons Corp"
 Comment1 ""
 Comment2 ""
 Comment3 ""
@@ -255,13 +255,13 @@ F 3 "" H 4000 3450 50  0000 C CNN
 $EndComp
 $Comp
 L LM324N U1
-U 2 1 57714913
+U 4 1 57714913
 P 4500 3000
 F 0 "U1" H 4550 3200 50  0000 C CNN
 F 1 "LM324N" H 4650 2800 50  0000 C CNN
 F 2 "Housings_DIP:DIP-14_W7.62mm_LongPads" H 4450 3100 50  0001 C CNN
 F 3 "" H 4550 3200 50  0000 C CNN
-	2    4500 3000
+	4    4500 3000
 	0    1    1    0   
 $EndComp
 $Comp
@@ -277,13 +277,13 @@ F 3 "" H 5100 3450 50  0000 C CNN
 $EndComp
 $Comp
 L LM324N U1
-U 4 1 577161FF
+U 2 1 577161FF
 P 5600 3000
 F 0 "U1" H 5650 3200 50  0000 C CNN
 F 1 "LM324N" H 5750 2800 50  0000 C CNN
 F 2 "Housings_DIP:DIP-14_W7.62mm_LongPads" H 5550 3100 50  0001 C CNN
 F 3 "" H 5650 3200 50  0000 C CNN
-	4    5600 3000
+	2    5600 3000
 	0    1    1    0   
 $EndComp
 $Comp
@@ -299,13 +299,13 @@ F 3 "" H 6200 3450 50  0000 C CNN
 $EndComp
 $Comp
 L LM324N U2
-U 2 1 577164A5
+U 4 1 577164A5
 P 6700 3000
 F 0 "U2" H 6750 3200 50  0000 C CNN
 F 1 "LM324N" H 6850 2800 50  0000 C CNN
 F 2 "Housings_DIP:DIP-14_W7.62mm_LongPads" H 6650 3100 50  0001 C CNN
 F 3 "" H 6750 3200 50  0000 C CNN
-	2    6700 3000
+	4    6700 3000
 	0    1    1    0   
 $EndComp
 $Comp
@@ -321,13 +321,13 @@ F 3 "" H 7300 3400 50  0000 C CNN
 $EndComp
 $Comp
 L LM324N U2
-U 4 1 5771659C
+U 2 1 5771659C
 P 7800 3000
 F 0 "U2" H 7850 3200 50  0000 C CNN
 F 1 "LM324N" H 7950 2800 50  0000 C CNN
 F 2 "Housings_DIP:DIP-14_W7.62mm_LongPads" H 7750 3100 50  0001 C CNN
 F 3 "" H 7850 3200 50  0000 C CNN
-	4    7800 3000
+	2    7800 3000
 	0    1    1    0   
 $EndComp
 Wire Wire Line
@@ -393,25 +393,10 @@ Connection ~ 6600 2500
 Wire Wire Line
 	7700 2500 7700 2700
 Connection ~ 7150 2500
-$Comp
-L POT RV1
-U 1 1 5771843C
-P 3750 2100
-F 0 "RV1" H 3750 2020 50  0000 C CNN
-F 1 "LVL" H 3750 2100 50  0000 C CNN
-F 2 "Potentiometers:Potentiometer_Trimmer-Piher_PT15-V15_horizontal" H 3750 2100 50  0001 C CNN
-F 3 "" H 3750 2100 50  0000 C CNN
-	1    3750 2100
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
 	3500 2150 3500 2100
 Wire Wire Line
 	3000 2100 3600 2100
-Wire Wire Line
-	3750 2250 3900 2250
-Wire Wire Line
-	3900 2250 3900 2100
 Wire Wire Line
 	3900 2100 4250 2100
 Wire Wire Line
@@ -528,23 +513,8 @@ Wire Wire Line
 	7850 2100 8000 2100
 Wire Wire Line
 	7900 2100 7900 2700
-$Comp
-L POT RV2
-U 1 1 577196E3
-P 8150 2100
-F 0 "RV2" H 8150 2020 50  0000 C CNN
-F 1 "LVH" H 8150 2100 50  0000 C CNN
-F 2 "Potentiometers:Potentiometer_Trimmer-Piher_PT15-V15_horizontal" H 8150 2100 50  0001 C CNN
-F 3 "" H 8150 2100 50  0000 C CNN
-	1    8150 2100
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
-	8400 4600 8400 1950
-Wire Wire Line
-	8150 2250 8300 2250
-Wire Wire Line
-	8300 2250 8300 2100
+	8400 1950 8400 4600
 Wire Wire Line
 	8300 2100 8400 2100
 Connection ~ 8400 2100
@@ -691,4 +661,26 @@ Wire Wire Line
 	3000 3650 3450 3650
 Wire Wire Line
 	3300 3450 3000 3450
+$Comp
+L R R16
+U 1 1 578A0DD6
+P 3750 2100
+F 0 "R16" V 3830 2100 50  0000 C CNN
+F 1 "RLVL" V 3750 2100 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM7mm" V 3680 2100 50  0001 C CNN
+F 3 "" H 3750 2100 50  0000 C CNN
+	1    3750 2100
+	0    1    1    0   
+$EndComp
+$Comp
+L R R17
+U 1 1 578A10D0
+P 8150 2100
+F 0 "R17" V 8230 2100 50  0000 C CNN
+F 1 "RLVH" V 8150 2100 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM7mm" V 8080 2100 50  0001 C CNN
+F 3 "" H 8150 2100 50  0000 C CNN
+	1    8150 2100
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC
