@@ -1,4 +1,4 @@
-update=2016 August 06, Saturday 12:36:33
+update=2016 July 31, Sunday 13:30:51
 version=1
 last_client=kicad
 [pcbnew]
@@ -58,14 +58,4 @@ LibName26=opto
 LibName27=atmel
 LibName28=contrib
 LibName29=valves
-LibName30=relays
-[schematic_editor]
-version=1
-PageLayoutDescrFile=
-PlotDirectoryName=
-SubpartIdSeparator=0
-SubpartFirstId=65
-NetFmtName=
-SpiceForceRefPrefix=0
-SpiceUseNetNumbers=0
-LabSize=60
+LibName30=/Users/footy/Projects/kicad-libs/schema/device-custom

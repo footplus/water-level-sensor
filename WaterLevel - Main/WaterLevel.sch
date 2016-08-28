@@ -127,7 +127,7 @@ U 1 1 5771137C
 P 5050 4400
 F 0 "RL1" H 5500 4550 50  0000 L CNN
 F 1 "12V/2A" H 5500 4450 50  0000 L CNN
-F 2 "Relays_ThroughHole:Relay_SPDT_Schrack-RT1_RM5mm" H 5050 4400 50  0001 C CNN
+F 2 "relays:Relay_1RT_Hongfa_HF33F" H 5050 4400 50  0001 C CNN
 F 3 "" H 5050 4400 50  0000 C CNN
 	1    5050 4400
 	1    0    0    -1  
@@ -171,7 +171,7 @@ U 1 1 5771183E
 P 2850 1850
 F 0 "C2" H 2875 1950 50  0000 L CNN
 F 1 "2200uF" H 2875 1750 50  0000 L CNN
-F 2 "Capacitors_ThroughHole:C_Axial_D13_L31_P38" H 2888 1700 50  0001 C CNN
+F 2 "Capacitors_ThroughHole:C_Radial_D14_L25_P5" H 2888 1700 50  0001 C CNN
 F 3 "" H 2850 1850 50  0000 C CNN
 	1    2850 1850
 	1    0    0    -1  
@@ -334,7 +334,7 @@ U 1 1 57712B16
 P 2750 4550
 F 0 "RV1" H 2750 4470 50  0000 C CNN
 F 1 "LVL2" H 2750 4550 50  0000 C CNN
-F 2 "Potentiometers:Potentiometer_Trimmer-Piher_PT15-V15_horizontal" H 2750 4550 50  0001 C CNN
+F 2 "Potentiometers:Potentiometer_Trimmer-Piher_PT10-V10_horizontal" H 2750 4550 50  0001 C CNN
 F 3 "" H 2750 4550 50  0000 C CNN
 	1    2750 4550
 	0    1    1    0   
@@ -352,22 +352,20 @@ Connection ~ 3400 4950
 $Comp
 L POT RV2
 U 1 1 57712C85
-P 3050 5250
-F 0 "RV2" H 3050 5170 50  0000 C CNN
-F 1 "LVL1" H 3050 5250 50  0000 C CNN
-F 2 "Potentiometers:Potentiometer_Trimmer-Piher_PT15-V15_horizontal" H 3050 5250 50  0001 C CNN
-F 3 "" H 3050 5250 50  0000 C CNN
-	1    3050 5250
+P 2850 5250
+F 0 "RV2" H 2850 5170 50  0000 C CNN
+F 1 "LVL1" H 2850 5250 50  0000 C CNN
+F 2 "Potentiometers:Potentiometer_Trimmer-Piher_PT10-V10_horizontal" H 2850 5250 50  0001 C CNN
+F 3 "" H 2850 5250 50  0000 C CNN
+	1    2850 5250
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	3050 5100 3050 4350
 Wire Wire Line
 	3050 4350 3200 4350
 Text GLabel 2550 5250 0    60   Input ~ 0
 VProbe
 Wire Wire Line
-	2550 5250 2900 5250
+	2550 5250 2700 5250
 Wire Wire Line
 	4250 4000 4250 4050
 Connection ~ 4250 4000
@@ -377,8 +375,6 @@ Wire Wire Line
 	4250 4800 4850 4800
 Connection ~ 4850 4800
 Connection ~ 4500 4800
-Wire Wire Line
-	3950 5250 3200 5250
 Wire Wire Line
 	4850 5500 4850 5250
 Connection ~ 4850 5500
@@ -405,7 +401,7 @@ U 1 1 5771ABED
 P 5100 6350
 F 0 "RL2" H 5550 6500 50  0000 L CNN
 F 1 "12V/2A" H 5550 6400 50  0000 L CNN
-F 2 "Relays_ThroughHole:Relay_SPDT_Schrack-RT1_RM5mm" H 5100 6350 50  0001 C CNN
+F 2 "relays:Relay_1RT_Hongfa_HF33F" H 5100 6350 50  0001 C CNN
 F 3 "" H 5100 6350 50  0000 C CNN
 	1    5100 6350
 	1    0    0    -1  
@@ -530,7 +526,7 @@ U 1 1 5771C2F2
 P 2900 6850
 F 0 "RV3" H 2900 6770 50  0000 C CNN
 F 1 "ALRM" H 2900 6700 50  0000 C CNN
-F 2 "Potentiometers:Potentiometer_Trimmer-Piher_PT15-V15_horizontal" H 2900 6850 50  0001 C CNN
+F 2 "Potentiometers:Potentiometer_Trimmer-Piher_PT10-V10_horizontal" H 2900 6850 50  0001 C CNN
 F 3 "" H 2900 6850 50  0000 C CNN
 	1    2900 6850
 	0    1    1    0   
@@ -885,4 +881,25 @@ F 3 "" H 5350 3950 50  0000 C CNN
 	1    5350 3950
 	1    0    0    -1  
 $EndComp
+$Comp
+L R R6
+U 1 1 578D43E7
+P 3650 5250
+F 0 "R6" V 3730 5250 50  0000 C CNN
+F 1 "10k" V 3650 5250 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM7mm" V 3580 5250 50  0001 C CNN
+F 3 "" H 3650 5250 50  0000 C CNN
+	1    3650 5250
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3950 5250 3800 5250
+Wire Wire Line
+	3500 5250 3000 5250
+Wire Wire Line
+	2850 5100 3050 5100
+Wire Wire Line
+	3050 4350 3050 5250
+Connection ~ 3050 5250
+Connection ~ 3050 5100
 $EndSCHEMATC
